@@ -262,7 +262,7 @@ const pets = [
   renderToDom("#app", domString);
   }
 
-  const filter =(array,nameString) => {
+ /* const filter =(array,nameString) => {
     const nameArray=[];
 
     for (const pet of array) {
@@ -272,11 +272,29 @@ const pets = [
     }
     return nameArray;
   }
-
+*/
   const showAllButton = document.querySelector("#show-btn");
   showAllButton.addEventListener('click', () => {
     cardsOnDom(pets);
     console.log(pets);
   });
 
+
+
  
+  const filter = (array, catString) => {
+    const catArray = [];
+    for (const cat of array) {
+      if (cat.type === catString) {
+        catArray.push(cat);
+      }
+    }
+  
+    return catArray;
+  }
+  const showCatButton = document.querySelector("#show-cats");
+
+  showCatButton.addEventListener('click', () => {
+    const catPets = filter(pets, "cat");
+    cardsOnDom(catPets);
+  });
