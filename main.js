@@ -241,10 +241,15 @@ const pets = [
     }
   ];
 
-  const targetingApp =  document.querySelector("#app");
+  const renderToDom = (divId, htmlToRender) => {
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = htmlToRender;
+  }
+  
+  const cardsOnDom= (array) => {
 
   let domString = "";
-  for (const pet of pets){
+  for (const pet of array){
     domString += `<div class="card" style="width: 18rem;">
     <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
     <div class="card-body">
@@ -253,5 +258,25 @@ const pets = [
     </div>
   </div>`;
   }
-  console.log(domString)
-  targetingApp.innerHTML=domString;
+
+  renderToDom("#app", domString);
+  }
+
+  const filter =(array,nameString) => {
+    const nameArray=[];
+
+    for (const pet of array) {
+      if (pet.name === nameString){
+        nameArray.push(pet);
+      }
+    }
+    return nameArray;
+  }
+
+  const showAllButton = document.querySelector("#show-btn");
+  showAllButton.addEventListener('click', () => {
+    cardsOnDom(pets);
+    console.log(pets);
+  });
+
+ 
