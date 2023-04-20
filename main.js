@@ -298,3 +298,19 @@ const pets = [
     const catPets = filter(pets, "cat");
     cardsOnDom(catPets);
   });
+
+
+  const dogFilter = (array, dogString) => {
+    const dogArray =[];
+    for (const dog of array){
+      if (dog.type===dogString){
+        dogArray.push(dog);
+      }
+    }
+    return dogArray;
+  }
+  const showDogButton = document.querySelector("#show-dogs");
+  showDogButton.addEventListener('click', () =>{
+    const dogPets=filter(pets,"dog");
+    cardsOnDom(dogPets);
+  });
