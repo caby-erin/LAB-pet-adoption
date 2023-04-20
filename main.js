@@ -255,6 +255,7 @@ const pets = [
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
       <p class="card-text">${pet.color}</p>
+      <p class="card-text"> ${pet.specialSkill}</p>
     </div>
   </div>`;
   }
@@ -314,3 +315,18 @@ const pets = [
     const dogPets=filter(pets,"dog");
     cardsOnDom(dogPets);
   });
+
+  const dinoFilter = (array, dinoString) => {
+    const dinoArray = [];
+    for (const dino of array){
+      if(dino.type===dinoString){
+        dinoArray.push(dino);
+      }
+    }
+    return dinoArray;
+  }
+  const showDinoButton = document.querySelector("#show-dinos");
+  showDinoButton.addEventListener("click",()=>{
+    const dinoPets=filter(pets,"dino");
+    cardsOnDom(dinoPets)
+  })
