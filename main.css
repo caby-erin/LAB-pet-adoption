@@ -7,16 +7,18 @@ body{
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  align-content: flex-start;
+  
   
 }
 
 .btn{
-  margin: 5px;
+  margin: 20px 2px;
   padding: 10px;
 }
 
 #app{
   display: flex;
   flex-wrap: wrap;
+  gap:20px;
+  justify-content: flex-start;
 }
