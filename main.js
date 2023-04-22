@@ -330,3 +330,24 @@ const pets = [
     const dinoPets=filter(pets,"dino");
     cardsOnDom(dinoPets)
   })
+
+  const form = document.querySelector ('form');
+ 
+  const createPet = (e)=>{
+    e.preventDefault();
+
+    const newPetObj ={
+      id: pets.length +1,
+      name: document.querySelector("#name").value,
+      color: document.querySelector("#color").value,
+      specialSkill: document.querySelector("#specialSkill").value,
+      type: document.querySelector("#typeOfPet").value,
+      image: document.querySelector("#image").value
+    }
+
+    pets.push(newPetObj);
+    cardsOnDom(pets);
+    form.reset()
+  }
+
+  form.addEventListener('submit', createPet);
