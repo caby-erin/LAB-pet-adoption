@@ -251,7 +251,7 @@ const pets = [
   let domString = "";
   for (const pet of array){
     domString += `<div class="card" style="width: 18rem;">
-    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
+    <img src="${pet.imageUrl}" class="card-img-top" alt=${pet.name}>
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
       <p class="card-text">${pet.color}</p>
@@ -342,7 +342,7 @@ const pets = [
       color: document.querySelector("#color").value,
       specialSkill: document.querySelector("#specialSkill").value,
       type: document.querySelector("#typeOfPet").value,
-      image: document.querySelector("#image").value
+      imageUrl: document.querySelector("#image").value
     }
 
     pets.push(newPetObj);
