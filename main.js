@@ -256,6 +256,7 @@ const pets = [
       <h5 class="card-title">${pet.name}</h5>
       <p class="card-text">${pet.color}</p>
       <p class="card-text"> ${pet.specialSkill}</p>
+      <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
     </div>
   </div>`;
   }
@@ -281,7 +282,7 @@ const pets = [
   });
 
 
-
+// Filters for all pets, cats, dogs, or dinos
  
   const filter = (array, catString) => {
     const catArray = [];
@@ -331,6 +332,9 @@ const pets = [
     cardsOnDom(dinoPets)
   })
 
+
+  // Create Form and Button 
+
   const form = document.querySelector ('form');
  
   const createPet = (e)=>{
@@ -351,3 +355,20 @@ const pets = [
   }
 
   form.addEventListener('submit', createPet);
+
+  //delete button
+
+  const app = document.querySelector("#app");
+
+  app.addEventListener('click', (e) =>{
+    if(e.target.id.includes("delete")){
+      const [, id]= e.target.id.split("--");
+      const index = pets.findIndex(e=> e.id === Number(id));
+      pets.splice(index,1);
+      cardsOnDom(pets);
+    }
+  });
+  const startApp=()=>{
+    cardsOnDom(pets);
+  }
+  startApp();
