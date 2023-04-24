@@ -5,7 +5,7 @@ body{
 .all-buttons{
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   
   
@@ -21,5 +21,30 @@ body{
   display: flex;
   flex-wrap: wrap;
   gap:20px;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+#show-btn{
+  background-color: blueviolet;
+}
+
+#show-cats{
+  background-color: rgb(65, 106, 23);
+}
+
+#show-dogs{
+  background-color: darkorange;
+}
+
+#show-dinos{
+  background-color: deepskyblue;
+}
+
+#form-submit{
+  background-color:mediumslateblue;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+  
 }
