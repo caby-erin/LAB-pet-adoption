@@ -372,3 +372,12 @@ const pets = [
     cardsOnDom(pets);
   }
   startApp();
+
+  //modal stretch goal
+
+  const myModal = document.getElementById('myModal')
+  const myInput = document.getElementById('myInput')
+  
+  myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+  })

@@ -45,6 +45,11 @@ body{
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
 
-  
+.add-new{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: dimgray;
 }

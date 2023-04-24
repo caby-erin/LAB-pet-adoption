@@ -17,9 +17,68 @@
   <button class="btn btn-primary" id="show-dogs"> Dogs </button>
   <button class="btn btn-primary" id="show-dinos"> Dinos</button>
 </div>
-  
 
-<form>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary add-new" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add New Pet
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Name" required>
+            <label for="floatingInput">Pet Name</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="color" placeholder="Color" required>
+            <label for="floatingInput">Color</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="specialSkill" placeholder="specialSkill" required>
+            <label for="floatingInput">Special Skill</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="typeOfPet" placeholder="typeOfPet" required>
+            <label for="floatingInput">Type of Pet</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="url" class="form-control" id="image" placeholder="image" required>
+            <label for="floatingInput">Image</label>
+          </div>
+          
+          <button type="submit" class="btn btn-success" id="form-submit">Add Pet</button>
+        
+        </form>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <form>
   <div class="form-floating mb-3">
     <input type="text" class="form-control" id="name" placeholder="Name" required>
     <label for="floatingInput">Pet Name</label>
@@ -48,7 +107,7 @@
   <button type="submit" class="btn btn-success" id="form-submit">Add Pet</button>
 
 </form>
-
+-->
 <div id="app"></div>
 
 
