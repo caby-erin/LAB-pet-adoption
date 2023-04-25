@@ -48,12 +48,28 @@
             <input type="text" class="form-control" id="specialSkill" placeholder="specialSkill" required>
             <label for="floatingInput">Special Skill</label>
           </div>
-        
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="typeOfPet" placeholder="typeOfPet" required>
-            <label for="floatingInput">Type of Pet</label>
+
+<!-- radio buttons for Type of Pet under Add New Pet -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="typeOfPet">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Cat
+            </label>
+        </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="typeOfPet" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Dog
+            </label>
           </div>
-        
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="typeOfPet" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Dino
+            </label>
+          </div>
+  <!-- end of radio buttons-->
+
           <div class="form-floating mb-3">
             <input type="url" class="form-control" id="image" placeholder="image" required>
             <label for="floatingInput">Image</label>
